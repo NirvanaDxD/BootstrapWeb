@@ -1,0 +1,86 @@
+/* 去除边距 */
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* 导航栏样式 */
+div.header{
+	height: 60px;
+	background-color: azure;
+	box-shadow: 0px 0px 0px 2px;
+	position: sticky;
+	top: 0px;
+}
+
+/* 导航中的logo和站名 */
+div.header_title{
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+/* 导航中的链接 */
+div.header_link{
+	float: center;
+	margin-left: 10px;
+}
+
+.btn-group.btn-group-toggle{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 64px;
+	text-align: center;
+}
+
+.header_link>button{
+	display: block;
+	float: left;
+	height: 60px;
+	width: 90px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5%;
+}
+
+
+
+
+
+/* 内容栏样式 */
+div.content{
+	height: 1000px;
+	width: 1200px;
+	margin: auto;
+	
+}
+
+/* 网站介绍 */
+.content>.content_msg{
+	text-align: center;
+	background-color: aquamarine;
+}
+p{
+	margin-bottom: 0px;
+	border: 2px;
+	border-color: black;
+}
+
+.content_intro>.content_intro_taile{
+	float: left;
+	background-color: #00FFFF;
+	width: 393px;
+	height: 120px;
+	margin-left: 5px;
+	text-align: center;
+}
+
+
+
+
+/* 版权栏样式 */
+div.footer{
+	height: 80px;
+	background-color: lightgray;
+}

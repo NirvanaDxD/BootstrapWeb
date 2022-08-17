@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>不知道知识分享站</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div>
+			<!-- 导航栏 -->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="#">
+					<img src="https://v4.bootcss.com/docs/4.6/assets/brand/bootstrap-solid.svg" width="30" height="30"
+						class="d-inline-block align-top" alt="">
+					不知道知识分享站
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://my.oschina.net/u/4756968">技术博客</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+								data-toggle="dropdown" aria-expanded="false">
+								视频教程
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="https://www.bilibili.com/">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">建设中</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://www.oschina.net/news">最新资讯</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="btn1" href="#">更新日志</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" id="searchText" type="search" placeholder="在此搜索" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" id="searchBtn" type="submit">搜索</button>
+					</form>
+				</div>
+			</nav>
+		</div>
+		
+		<script>
+			$("#searchBtn").click(function(){
+				var msg = document.getElementById("searchText").value
+				window.location.href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=" + msg
+			})
+			
+			
+		</script>
+		
+		
+		<div class="container">
+			<div class="toast" id="myToast" data-delay="10000" style="position: fixed; bottom: 50%;right: 50%;z-index: 10;">
+				<div class="toast-header">
+					<img src="img/logo_sm.png" width="20" class="rounded mr-2">
+					<strong class="mr-auto">2022.8.17更新日志</strong>
+					<small>此窗口十秒后自动关闭</small>
+					<button class="close ml-2 mb-1" data-dismiss="toast">&times;</button>
+				</div>
+				<div class="toast-body">
+					<p>添加了点击导航栏 技术博客跳转 开源博客 功能</p>
+					<p>添加了导航栏 视频教程跳转 哔哩哔哩视频网 功能</p>
+					<p>添加了点击导航栏 最新咨询跳转 开源资讯 功能</p>
+					<p>添加 图片轮播 功能</p>
+					<p>添加 搜索框搜索链接百度搜索 功能</p>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			$('#btn1').click(function(){
+				$('#myToast').toast('show');
+			});
+		</script>
+
+
+		<!-- 内容栏 -->
+		<div class="content border border-primary">
+			<div class="content_msg">
+				<h1>技术知识分享站</h1>
+				<p>我不知道我不知道什么</p>
+			</div>
+			
+				<div class="row no-gutters text-info text-center">
+					<div class="col-sm-4 border-left-0 border-right-0 border border-success" >
+						<h2>技术博客</h2>
+						<p>分享使用技术以及问题解决方案</p>
+					</div>
+					<div class="col-sm-4 border-right-0 border border-success">
+						<h2>视频教程</h2>
+						<p>提供系统的视频学习课程</p>
+					</div>
+					<div class="col-sm-4  border border-right-0 border-success">
+						<h2>资讯</h2>
+						<p>最新的信息技术相关资讯</p>
+					</div>
+				</div>
+			
+			<div class="carousel slide" data-ride="carousel" data-interval="5000" id="myCarousel">
+				<!-- 姿态指示器 -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+				
+				<!-- 图片轮播 -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+					    <img src="img/1.jpg" class="d-block w-100" alt="">
+					</div>
+					<div class="carousel-item">
+					  <img src="img/2.jpg" class="d-block w-100" alt="">
+					</div>
+					<div class="carousel-item">
+					  <img src="img/3.jpg" class="d-block w-100" alt="">
+					</div>
+					
+					<!-- 前后控制器 -->
+					<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+			</div>
+		
+		<div class="jumbotron">
+			<h1 class="display-3">内容施工中</h1>
+			<p class="lead">简陋的网站搭建中</p>
+			<hr class="my-4">
+			<p>有兴趣来看看我贫瘠的仓库么</p>
+			<p class="lead">
+				<a href="https://github.com/NirvanaDxD?tab=repositories" class="btn btn-primary btn-lg">了解更多</a>
+			</p>
+		</div>
+		
+		</div>
+
+		
+
+
+
+
+		<!-- 版权栏 -->
+		<div class="footer">
+			<marquee>版权所有@2022-parent author dyc
+			</marquee>
+		</div>
+
+
+		
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>二维码</title>
+	<script src="js/qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+  <div id="code" class="qrcode">
+    <!--二维码容器,在这个div里面生成二维码-->
+  </div>
+
+  <script>
+    let qrcode = new QRCode(document.getElementById("code"), {
+      width : 200,
+      height : 200
+    });
+    qrcode.makeCode("http://dqyicz.natappfree.cc/web/index.html");
+  </script>
+  </body>
+</html>
+
